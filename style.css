@@ -43,7 +43,86 @@ main {
     width: min(42.8rem, 90%);
 
     margin-top: -6rem;
+
+    text-align: center;
 }
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+p {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+
+    margin-top: 1.4rem;
+}
+
+h1, p {
+    color: #34355B;
+}
+
+.closed__cookie {
+    margin-top: 2.0rem;
+    padding: 0.6rem 0.6rem 0.2rem;
+}
+
+.closed__cookie:hover {
+    cursor: pointer;
+
+    animation: cookie 0.2s linear infinite;
+}
+
+@keyframes cookie {
+    0% {margin-left: 0;}
+    25% {margin-top: 0.1rem;}
+    50% {margin-left: 0;}
+    75% {margin-left: -5rem;}
+    100% {margin-left: 0;}
+}
+
+h2 {
+    font-family: "Dancing Script", sans-serif;
+    font-weight: 400;
+    font-size: 2.4rem;
+
+    margin-top: 1.7rem;
+
+    color: #000000;
+
+    padding: 1.0rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem 0 rgba(85, 85, 85, 0.5);
+    background-color: #E4EDF1;
+}
+
+.opened__cookie {
+    margin-top: 1.7rem;
+    padding: 4.2rem 0;
+}
+
+button {
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+
+    margin-top: 1.7rem;
+
+    color: #FFFFFF;
+
+    border: none;
+    padding: 1.6rem;
+    background-color: #FF9500;
+    border-radius: 0.4rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #d87e00;
+}
+
 
 
 
