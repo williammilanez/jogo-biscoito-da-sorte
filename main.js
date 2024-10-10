@@ -1,23 +1,49 @@
+// variáveis da aplicação
 const screen1 = document.querySelector(".screen1")
 const screen2 = document.querySelector(".screen2")
+const clickCookie = document.querySelector("#clickCookie")
+const buttonReset = document.querySelector("#buttonReset")
 
-// função callback
+// eventos
+clickCookie.addEventListener('click', handleClick)
+buttonReset.addEventListener('click', handleResetClick)
+document.addEventListener('keydown', pressEnter)
+
+// funções callback / métodos
 function handleClick(event) {
     event.preventDefault()
 
-    screen1.classList.add("hide")
-    screen2.classList.remove("hide")
+    toggleScreen()
+
+
+
+
+
+
+
+
+
+
+
 }
 
-// eventos
-const generateRandomText = document.querySelector("#generateRandomText")
-const buttonReset = document.querySelector("#buttonReset")
+function toggleScreen() {
+    screen1.classList.toggle("hide")
+    screen2.classList.toggle("hide")
+}
 
-generateRandomText.addEventListener('click', handleClick)
-buttonReset.addEventListener('click', function() {
-    screen1.classList.remove("hide")
-    screen2.classList.add("hide")
-})
+function handleResetClick() {
+    toggleScreen()
+}
 
-// falta criar o evento de selecionar um texto aleatório do h2
+function pressEnter(e) {
+    if(e.key == 'Enter' && screen1.classList.contains('hide')) {
+        handleResetClick()
+        }
+}
+
+
+
+
+
 
